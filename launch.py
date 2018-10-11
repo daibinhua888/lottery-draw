@@ -62,16 +62,12 @@ while True:
                 number2.begin()
                 number3.begin()
 
-            anyNumberStoped = False
             if number1.isInitialized() and not number1.isDone() and number1.isMousePositionHit(pygame.mouse.get_pos()):
                 number1.stop()
-                anyNumberStoped = True
             if number2.isInitialized() and not number2.isDone() and number2.isMousePositionHit(pygame.mouse.get_pos()):
                 number2.stop()
-                anyNumberStoped = True
             if number3.isInitialized() and not number3.isDone() and number3.isMousePositionHit(pygame.mouse.get_pos()):
                 number3.stop()
-                anyNumberStoped = True
 
             if number1.isInitialized() and number1.isDone() and number2.isInitialized() and number2.isDone() and number3.isInitialized() and number3.isDone():
                 current_status = 'stop'
