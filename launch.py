@@ -6,22 +6,23 @@ pygame.init()  # 2、初始化init() 及设置
 
 screen_list=pygame.display.list_modes()
 
-screen_size = screen_list[0]
+screen_size = screen_list[16]
 RND_FROM=1
 RND_END=430
 background_image_filename = 'resources/back.jpg'
 background_wav_file='resources/40.wav'
 font_ZHCN=pygame.font.SysFont('SimHei', 100)
 congratulationWord_color=255,255,255
-congratulationWord_text_position=(700, 230)
-text_position_y = 450
-random_text_position1=(1000, text_position_y)
+congratulationWord_text_position=(screen_size[0]*0.3, screen_size[1]*0.1)
+text_position_y = screen_size[1]*0.3
+random_text_position1=(screen_size[0]*0.6, text_position_y)
 random_text_position2=(random_text_position1[0]+80, text_position_y)
 random_text_position3=(random_text_position2[0]+80, text_position_y)
 
 
 import RandomNumberSprite
 screen = pygame.display.set_mode(screen_size, FULLSCREEN, 32)
+# screen = pygame.display.set_mode(screen_size)
 
 background = pygame.image.load(background_image_filename).convert()
 background = pygame.transform.scale(background, screen_size)
